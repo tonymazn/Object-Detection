@@ -7,7 +7,7 @@ YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
 
 
 import tensorflow as tf
-from utils import load_class_names, output_boxes, draw_outputs, resize_image
+from core.utils import load_class_names, output_boxes, draw_outputs, resize_image
 import cv2
 import numpy as np
 from core.yolov3tensorflow import YOLOv3Net
@@ -22,7 +22,7 @@ class_name = './data/coco.names'
 max_output_size = 40
 max_output_size_per_class= 20
 iou_threshold = 0.5
-confidence_threshold = 0.5
+confidence_threshold = 0.6
 
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'

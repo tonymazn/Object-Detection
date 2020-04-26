@@ -134,4 +134,4 @@ dmypy.json
 
 # ignore vs
 /.vs
-slnx.sqlite
+/.vs/*.*
