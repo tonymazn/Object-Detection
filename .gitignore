@@ -131,3 +131,7 @@ dmypy.json
 # weights folder too big to check in
 /weights/*weights*
 *.weights
+
+# ignore vs
+/.vs
+slnx.sqlite
