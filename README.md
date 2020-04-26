@@ -2,4 +2,4 @@
 
 Here's the output example:
 
-![Detection Example](Image detection.png)
+![Detection Example](Image_detection.png)
