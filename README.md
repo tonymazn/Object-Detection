@@ -10,6 +10,7 @@ https://youtu.be/7O721Zt6wE8
 Here's the camera output example:
 https://youtu.be/GHK44tlMlcA
 
+
 -
 This project is a Python base tool to demonstrate Object Detecion by YOLO v3.
 
@@ -101,3 +102,4 @@ Reference
 *  (3) YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
 *  (4) jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 *  (5) RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
+*  (6) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD
