@@ -8,6 +8,7 @@ Here's the video output example:
 [![Video Object Detaction DEMO](videoCapture.PNG)](https://youtu.be/7O721Zt6wE8)
 
 Here's the camera output example:
+
 [![Video Object Detaction DEMO](cameraCapture.PNG)](https://youtu.be/GHK44tlMlcA)
 
 
