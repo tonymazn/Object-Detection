@@ -12,8 +12,9 @@ Here's the camera output example:
 [![Video Object Detaction DEMO](cameraCapture.PNG)](https://youtu.be/GHK44tlMlcA)
 
 
+
 -
-This project is a Python base tool to demonstrate Object Detecion by YOLO v3.
+This project is a Python base tool to demonstrate Object Detecion by YOLO v3 on Windows Envirenment.
 
 Installation
 -
@@ -33,12 +34,13 @@ Install the requirements packages
 
 step 3
 
-![Download data and weights zip file here](https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf  "data and weights zip file")
-
-and unzip copy to the same folders.
+![Download data and weights zip file here](https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf  "data and weights zip file") and unzip copy to the same folders.
 
 you are ready to go!
 ```
+
+![Download data and weights zip file here](https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf  "data and weights zip file") and unzip copy to the same folders.
+
 
 System Structure
 -
