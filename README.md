@@ -2,7 +2,7 @@
 
 Here's the image output example:
 
-Image_detection.png
+![Detection Example](Image_detection.png)
 
 Here's the video output example:
 https://youtu.be/7O721Zt6wE8
