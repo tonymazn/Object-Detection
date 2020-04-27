@@ -5,10 +5,10 @@ Here's the image output example:
 ![Image Object Detection DEMO](Image_detection.png)
 
 Here's the video output example:
-[![Video Object Detaction DEMO](youtube.png)](https://youtu.be/7O721Zt6wE8)
+[![Video Object Detaction DEMO](videoCapture.png)](https://youtu.be/7O721Zt6wE8)
 
 Here's the camera output example:
-[![Video Object Detaction DEMO](youtube.png)](https://youtu.be/GHK44tlMlcA)
+[![Video Object Detaction DEMO](cameraCapture.png)](https://youtu.be/GHK44tlMlcA)
 
 
 -
