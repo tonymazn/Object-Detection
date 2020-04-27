@@ -2,13 +2,13 @@
 
 Here's the image output example:
 
-![Detection Example](Image_detection.png)
+![Image Object Detection DEMO](Image_detection.png)
 
 Here's the video output example:
-https://youtu.be/7O721Zt6wE8
+[![Video Object Detaction DEMO](youtube.png)](https://youtu.be/7O721Zt6wE8)
 
 Here's the camera output example:
-https://youtu.be/GHK44tlMlcA
+[![Video Object Detaction DEMO](youtube.png)](https://youtu.be/GHK44tlMlcA)
 
 
 -
@@ -31,10 +31,11 @@ Install the requirements packages
 
 
 step 3
-Download weight file
-TODO: add weight file list
+Download zip file and unzip copy to the same folders.
+https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
 
-you are ready to go
+
+you are ready to go!
 ```
 
 System Structure
