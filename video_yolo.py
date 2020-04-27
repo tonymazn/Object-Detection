@@ -10,46 +10,51 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 
 import tensorflow as tf
 
-from utils import load_class_names, output_boxes, draw_outputs, resize_image
+from core.utils import load_class_names, output_boxes, draw_outputs, resize_image
 import cv2
 import time
 
 from core.yolov3tensorflow import YOLOv3Net
 
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
-assert len(physical_devices) > 0, "Not enough GPU hardware devices available"
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
+gpu = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpu[0], True)
 
 
-model_size = (416, 416,3)
-num_classes = 80
-class_name = './data/coco.names'
-max_output_size = 100
-max_output_size_per_class= 20
-iou_threshold = 0.5
-confidence_threshold = 0.5
+modelSize = (416, 416,3)
+numberOfClasses = 80
+className = './data/coco.names'
+maxOutputSize = 100
+maxOutputSizePerClass= 20
+iouThreshold = 0.5
+confidenceThreshold = 0.5
 
 
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
+video_filename = "data/videoes/2019_0224_112436_312.mp4"
+output_format = "XVID"
+#"mp4v"
+output_file = "result/2019_0224_112436_312_result.mp4"
 
 def main():
 
-    model = YOLOv3Net(cfgfile,model_size,num_classes)
+    model = YOLOv3Net(cfgfile,modelSize,numberOfClasses)
 
     model.load_weights(weightfile)
 
-    class_names = load_class_names(class_name)
+    class_names = load_class_names(className)
 
 
 
-    win_name = 'Yolov3 detection'
+    win_name = 'Yolov3 video'
     cv2.namedWindow(win_name)
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(video_filename)
     frame_size = (cap.get(cv2.CAP_PROP_FRAME_WIDTH),
                   cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
+    fps = int(cap.get(cv2.CAP_PROP_FPS))
+    codec = cv2.VideoWriter_fourcc(*output_format)
+    out = cv2.VideoWriter(output_file, codec, fps, (int(frame_size[0]), int(frame_size[1])))
     try:
         while True:
             start = time.time()
@@ -58,16 +63,16 @@ def main():
                 break
 
             resized_frame = tf.expand_dims(frame, 0)
-            resized_frame = resize_image(resized_frame, (model_size[0],model_size[1]))
+            resized_frame = resize_image(resized_frame, (modelSize[0],modelSize[1]))
 
             pred = model.predict(resized_frame)
 
             boxes, scores, classes, nums = output_boxes( \
-                pred, model_size,
-                max_output_size=max_output_size,
-                max_output_size_per_class=max_output_size_per_class,
-                iou_threshold=iou_threshold,
-                confidence_threshold=confidence_threshold)
+                pred, modelSize,
+                max_output_size=maxOutputSize,
+                max_output_size_per_class=maxOutputSizePerClass,
+                iou_threshold=iouThreshold,
+                confidence_threshold=confidenceThreshold)
 
             img = draw_outputs(frame, boxes, scores, classes, nums, class_names)
             cv2.imshow(win_name, img)
@@ -75,6 +80,8 @@ def main():
             stop = time.time()
 
             seconds = stop - start
+
+            out.write(img)
 
             fps = 1 / seconds
             print("Estimated frames per second : {0}".format(fps))

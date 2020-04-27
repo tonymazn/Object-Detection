@@ -12,42 +12,41 @@ import cv2
 import numpy as np
 from core.yolov3tensorflow import YOLOv3Net
 
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
-assert len(physical_devices) > 0, "Not enough GPU hardware devices available"
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
+gpu = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpu[0], True)
 
-model_size = (416, 416,3)
-num_classes = 80
-class_name = './data/coco.names'
-max_output_size = 40
-max_output_size_per_class= 20
-iou_threshold = 0.5
-confidence_threshold = 0.6
+sizeOfModel = (416, 416,3)
+numberOfClass = 80
+className = './data/coco.names'
+maxOutputSize = 40
+maxOutputSizePerClass= 20
+iouThreshold = 0.5
+confidenceThreshold = 0.6
 
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
-img_filename = "data/images/test.jpg"
+imgFilename = "data/images/test.jpg"
 
 def main():
 
-    model = YOLOv3Net(cfgfile,model_size,num_classes)
+    model = YOLOv3Net(cfgfile,sizeOfModel,numberOfClass)
     model.load_weights(weightfile)
 
-    class_names = load_class_names(class_name)
+    class_names = load_class_names(className)
 
-    image = cv2.imread(img_filename)
+    image = cv2.imread(imgFilename)
     image = np.array(image)
     image = tf.expand_dims(image, 0)
 
-    resized_frame = resize_image(image, (model_size[0],model_size[1]))
+    resized_frame = resize_image(image, (sizeOfModel[0],sizeOfModel[1]))
     pred = model.predict(resized_frame)
 
     boxes, scores, classes, nums = output_boxes( \
-        pred, model_size,
-        max_output_size=max_output_size,
-        max_output_size_per_class=max_output_size_per_class,
-        iou_threshold=iou_threshold,
-        confidence_threshold=confidence_threshold)
+        pred, sizeOfModel,
+        max_output_size=maxOutputSize,
+        max_output_size_per_class=maxOutputSizePerClass,
+        iou_threshold=iouThreshold,
+        confidence_threshold=confidenceThreshold)
 
     aclass = classes[0]
     image = np.squeeze(image)
