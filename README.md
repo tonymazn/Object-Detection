@@ -20,7 +20,7 @@ Installation
 -
 Getting the tool to work is simple, download/clone the package, unzip the package and go to the ObjectDetection-master folder and then run the following command:
 
-```
+`
 step 1
 Create Virtual Environment
     conda create -n yolov3 python=3.7
@@ -33,13 +33,12 @@ Install the requirements packages
 
 
 step 3
-Download data and weights zip file here
-https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
+[Download ObjectDection.zip file here]:(https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf)
 
-and unzip copy to the same folders.
+and unzip the file and copy to the same folders.
 
 you are ready to go!
-```
+`
 
 System Structure
 -
