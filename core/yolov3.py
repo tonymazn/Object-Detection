@@ -61,7 +61,7 @@ def build(cfgfile, model_size, num_classes):
 
             if len(block["layers"]) > 1:
                 end = int(block["layers"][1]) - i
-                filters = outputFilters[i + start] + outputFilters[end]  # Index negatif :end - index
+                filters = outputFilters[i + start] + outputFilters[end] 
                 inputs = tf.concat([outputs[i + start], outputs[i + end]], axis=-1)
             else:
                 filters = outputFilters[i + start]
