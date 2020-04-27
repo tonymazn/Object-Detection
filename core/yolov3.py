@@ -1,11 +1,8 @@
 """
 Reference: 
 
-official yolov3 implementation  https://github.com/pjreddie/darknet
-Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
-YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
-jaskarannagi19 https://github.com/jaskarannagi19/yolov3
-RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
+Ayoosh Kathuria https://github.com/ayooshkathuria/YOLO_v3_tutorial_from_scratch/blob/master/darknet.py
+YunYang1994 https://github.com/YunYang1994/tensorflow-yolov3/blob/master/core/yolov3.py
 """
 
 

@@ -1,11 +1,7 @@
 """
 Reference: 
 
-official yolov3 implementation  https://github.com/pjreddie/darknet
-Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
-YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
-jaskarannagi19 https://github.com/jaskarannagi19/yolov3
-RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
+YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3/blob/master/video_demo.py
 """
 
 import tensorflow as tf
@@ -15,7 +11,7 @@ from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, 
 
 win_name = 'Video object detection'
 className = './data/coco.names'
-cfgfile = 'cfg/yolov3.cfg'
+cfgfile = './cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
 video_filename = "data/videoes/2019_0224_112436_312.mp4"
 output_format = "XVID"   #"mp4v"
