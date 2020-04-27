@@ -10,7 +10,7 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.layers import BatchNormalization, Conv2D, Input, ZeroPadding2D, LeakyReLU, UpSampling2D
-from core.utils import config_manager
+from core.utils import configManager
 
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
@@ -18,7 +18,7 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 def build(cfgfile, model_size, num_classes):
 
-    blocks = config_manager(cfgfile)
+    blocks = configManager(cfgfile)
 
     outputs = {}
     outputFilters = []

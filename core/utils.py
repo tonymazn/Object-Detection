@@ -11,10 +11,8 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 import tensorflow as tf
 import numpy as np
 import cv2
-import time
 
-
-def config_manager(cfgfile):
+def configManager(cfgfile):
     with open(cfgfile, 'r') as file:
         lines = [line.rstrip('\n') for line in file if line != '\n' and line[0] != '#']
     holder = {}
@@ -30,31 +28,30 @@ def config_manager(cfgfile):
     blocks.append(holder)
     return blocks
 
-def resize_image(inputs, modelsize):
+def resizeImage(inputs, modelsize):
     inputs= tf.image.resize(inputs, modelsize)
     return inputs
 
 
-def output_boxes(inputs,model_size, max_output_size, max_output_size_per_class,
-                 iou_threshold, confidence_threshold):
+def getOutputBoxes(inputs,modelSize, maxOutputSize, maxOutputSizePerClass,
+                 iouThreshold, confidenceThreshold):
 
-    center_x, center_y, width, height, confidence, classes = \
+    centerX, centerY, width, height, confidence, classes = \
         tf.split(inputs, [1, 1, 1, 1, 1, -1], axis=-1)
 
-    top_left_x = center_x - width / 2.0
-    top_left_y = center_y - height / 2.0
-    bottom_right_x = center_x + width / 2.0
-    bottom_right_y = center_y + height / 2.0
+    topLeftX = centerX - width / 2.0
+    topLeftY = centerY - height / 2.0
+    bottomRightX = centerX + width / 2.0
+    bottomRightY = centerY + height / 2.0
 
-    inputs = tf.concat([top_left_x, top_left_y, bottom_right_x,
-                        bottom_right_y, confidence, classes], axis=-1)
+    inputs = tf.concat([topLeftX, topLeftY, bottomRightX,
+                        bottomRightY, confidence, classes], axis=-1)
 
-    boxes_dicts = non_max_suppression(inputs, model_size, max_output_size,
-                                      max_output_size_per_class, iou_threshold, confidence_threshold)
+    boxes_dicts = nonMaxSuppression(inputs, modelSize, maxOutputSize, maxOutputSizePerClass, iouThreshold, confidenceThreshold)
 
     return boxes_dicts
 
-def draw_outputs(img, boxes, objectness, classes, nums, class_names):
+def drawOutputs(img, boxes, objectness, classes, nums, class_names):
     boxes, objectness, classes, nums = boxes[0], objectness[0], classes[0], nums[0]
     boxes=np.array(boxes)
 
@@ -65,19 +62,18 @@ def draw_outputs(img, boxes, objectness, classes, nums, class_names):
 
             img = cv2.rectangle(img, (x1y1), (x2y2), (255,0,0), 2)
 
-            img = cv2.putText(img, '{} {:.2f}'.format(
-                class_names[int(classes[i])], objectness[i]),
+            img = cv2.putText(img, '{} {:.2f}'.format(class_names[int(classes[i])], objectness[i]),
                               (x1y1), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
     return img
 
 
 
-def load_class_names(file_name):
+def getClassNames(file_name):
     with open(file_name, 'r') as f:
         class_names = f.read().splitlines()
     return class_names
 
-def non_max_suppression(inputs, model_size, max_output_size,
+def nonMaxSuppression(inputs, model_size, max_output_size,
                         max_output_size_per_class, iou_threshold, confidence_threshold):
     bbox, confs, class_probs = tf.split(inputs, [4, 1, -1], axis=-1)
     bbox=bbox/model_size[0]
@@ -93,10 +89,9 @@ def non_max_suppression(inputs, model_size, max_output_size,
     )
     return boxes, scores, classes, valid_detections
 
-def statistics():
-    stop = time.time()
-    seconds = stop - start
-    fps = 1 / seconds
-    print("Estimated frames/second : {0}".format(fps))
+def quit():
+    return (cv2.waitKey(1) & 0xFF) == ord('c')
+           
+
 
 
