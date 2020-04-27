@@ -1,26 +1,16 @@
-﻿# YOLOv3 Tensorflow
--
+﻿Final Project: Object Detection - VOLOv3 Tensorflow
+
+[DEMO]
 This project is a Python base tool to demonstrate Object Detecion by YOLO v3 on Windows Envirenment.
 
+Image Object Detection DEMO:  Image_detection.png)
 
-Here's the image output example:
+Video Object Detection DEMO:  https://youtu.be/7O721Zt6wE8
 
-![Image Object Detection DEMO](Image_detection.png)
-
-Here's the video output example:
-[![Video Object Detaction DEMO](videoCapture.PNG)](https://youtu.be/7O721Zt6wE8)
-
-Here's the camera output example:
-
-[![Camera Object Detaction DEMO](cameraCapture.PNG)](https://youtu.be/GHK44tlMlcA)
+Camera Object Detaction DEMO: https://youtu.be/GHK44tlMlcA
 
 
-
-Installation
--
-Getting the tool to work is simple, download/clone the package, unzip the package and go to the ObjectDetection-master folder and then run the following command:
-
-
+[Installation]
 step 1
 Create Virtual Environment
 
@@ -43,12 +33,9 @@ step 3
 you are ready to go!
 
 
-System Structure
--
 
-
-
-    .
+[System Structure]
+ .
     ├─ .vs                                       # Visual Studio files
     ├─ cfg
     │     ├── yolov2-voc.cfg                     # YOLO2 VOC  dataset config file
@@ -87,21 +74,19 @@ System Structure
 	├─ Image_detection.png                       # README image Object Detaction Result DEMO
     └─ LICENSE                                   # License 
 
-Version
--
+
+[Version]
 0.0.1 
 
-Team Member
+[Team Member]
 -
 Zhouning Ma(ZM11)
 
-License
--
+[License]
 Apache License
 
 
-
-Reference
+[Reference]
 -
 *  (1) official yolov3 implementation  https://github.com/pjreddie/darknet
 *  (2) Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
