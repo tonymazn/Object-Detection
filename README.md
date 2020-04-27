@@ -28,6 +28,11 @@ step 2
 Install the requirements packages
 (yolov3)$ pip install -r requirement.txt
 
+
+step 3
+Download weight file
+TODO: add weight file list
+
 you are ready to go
 ```
 
@@ -62,7 +67,9 @@ System Structure
     │     ├── yolov3_weights.tf.data-00001-of-00002
     │     ├── yolov3_weights.tf.index            # Tensorflow format YOLO COCO weight file
     │     └── note.txt                           
-
+    ├── result                                   # video/image object detaction result folder  
+    │     ├── 2019_0224_112436_312_result.mp4    
+    │     └── Image_detection.png
     ├─ README.md
 	├─ camera_yolo.py                            # Object Detaction by camera
 	├─ video_yolo.py                             # Object Detaction by video file
@@ -70,4 +77,27 @@ System Structure
 	├─ transform_weights.py                      # Transform YOLO weight file to tensorform format
 	├─ requirements.txt                          # Install requirement list
     ├─ SECURITY.md                               # github SECURITY file
+	├─ Image_detection.png                       # README image Object Detaction Result DEMO
     └─ LICENSE                                   # License 
+
+Version
+-
+0.0.1 
+
+Team Member
+-
+Zhouning Ma(ZM11)
+
+License
+-
+Apache License
+
+
+
+Reference
+-
+*  (1) official yolov3 implementation  https://github.com/pjreddie/darknet
+*  (2) Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
+*  (3) YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
+*  (4) jaskarannagi19 https://github.com/jaskarannagi19/yolov3
+*  (5) RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
