@@ -93,3 +93,10 @@ def non_max_suppression(inputs, model_size, max_output_size,
     )
     return boxes, scores, classes, valid_detections
 
+def statistics():
+    stop = time.time()
+    seconds = stop - start
+    fps = 1 / seconds
+    print("Estimated frames/second : {0}".format(fps))
+
+

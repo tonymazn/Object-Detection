@@ -10,7 +10,7 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 
 import tensorflow as tf
 
-from core.utils import load_class_names, output_boxes, draw_outputs, resize_image
+from core.utils import load_class_names, output_boxes, draw_outputs, resize_image, statistics
 import cv2
 import time
 
@@ -27,8 +27,7 @@ maxOutputSize = 100
 maxOutputSizePerClass= 20
 iouThreshold = 0.5
 confidenceThreshold = 0.5
-
-
+win_name = 'Yolov3 video'
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
 video_filename = "data/videoes/2019_0224_112436_312.mp4"
@@ -37,18 +36,10 @@ output_format = "XVID"
 output_file = "result/2019_0224_112436_312_result.mp4"
 
 def main():
-
     model = YOLOv3(cfgfile,modelSize,numberOfClasses)
-
     model.load_weights(weightfile)
-
     class_names = load_class_names(className)
-
-
-
-    win_name = 'Yolov3 video'
     cv2.namedWindow(win_name)
-
     cap = cv2.VideoCapture(video_filename)
     frame_size = (cap.get(cv2.CAP_PROP_FRAME_WIDTH),
                   cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -64,9 +55,7 @@ def main():
 
             resized_frame = tf.expand_dims(frame, 0)
             resized_frame = resize_image(resized_frame, (modelSize[0],modelSize[1]))
-
             pred = model.predict(resized_frame)
-
             boxes, scores, classes, nums = output_boxes( \
                 pred, modelSize,
                 max_output_size=maxOutputSize,
@@ -76,25 +65,16 @@ def main():
 
             img = draw_outputs(frame, boxes, scores, classes, nums, class_names)
             cv2.imshow(win_name, img)
-
-            stop = time.time()
-
-            seconds = stop - start
-
             out.write(img)
-
-            fps = 1 / seconds
-            print("Estimated frames per second : {0}".format(fps))
-
+            statistics()
             key = cv2.waitKey(1) & 0xFF
-
-            if key == ord('q'):
+            if key == ord('c'):
                 break
 
     finally:
         cv2.destroyAllWindows()
         cap.release()
-        print('Detections have been performed successfully.')
+        print('The job has been done successfully.')
 
 
 if __name__ == '__main__':

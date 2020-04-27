@@ -10,11 +10,11 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 
 import tensorflow as tf
 
-from core.utils import load_class_names, output_boxes, draw_outputs, resize_image
+from core.utils import load_class_names, output_boxes, draw_outputs, resize_image, statistics
 import cv2
 import time
 
-from core.yolov3tensorflow import build
+from core.yolov3 import build
 
 gpu = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu[0], True)
@@ -28,23 +28,16 @@ maxOutputSizePerClass= 20
 iouThreshold = 0.5
 confidenceThreshold = 0.5
 
+win_name = 'Yolov3 detection'
 
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
 
 def main():
-
     model = build(cfgfile,modelSize,numOfClasses)
-
     model.load_weights(weightfile)
-
     class_names = load_class_names(className)
-
-
-
-    win_name = 'Yolov3 detection'
     cv2.namedWindow(win_name)
-
     cap = cv2.VideoCapture(0)
     frame_size = (cap.get(cv2.CAP_PROP_FRAME_WIDTH),
                   cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -71,22 +64,15 @@ def main():
             img = draw_outputs(frame, boxes, scores, classes, nums, class_names)
             cv2.imshow(win_name, img)
 
-            stop = time.time()
-
-            seconds = stop - start
-
-            fps = 1 / seconds
-            print("Estimated frames per second : {0}".format(fps))
-
+            statistics();
             key = cv2.waitKey(1) & 0xFF
-
-            if key == ord('q'):
+            if key == ord('c'):
                 break
 
     finally:
         cv2.destroyAllWindows()
         cap.release()
-        print('Detections have been performed successfully.')
+        print('The job has been done successfully.')
 
 
 if __name__ == '__main__':
