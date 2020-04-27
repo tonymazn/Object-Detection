@@ -33,7 +33,6 @@ step 3
 you are ready to go!
 
 
-
 [System Structure]
  .
     ├─ .vs                                       # Visual Studio files
@@ -78,16 +77,16 @@ you are ready to go!
 [Version]
 0.0.1 
 
+
 [Team Member]
--
 Zhouning Ma(ZM11)
+
 
 [License]
 Apache License
 
 
 [Reference]
--
 *  (1) official yolov3 implementation  https://github.com/pjreddie/darknet
 *  (2) Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 *  (3) YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
