@@ -10,7 +10,7 @@ import tensorflow as tf
 from core.utils import load_class_names, output_boxes, draw_outputs, resize_image
 import cv2
 import numpy as np
-from core.yolov3tensorflow import YOLOv3Net
+from core.yolov3 import build
 
 gpu = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu[0], True)
@@ -29,7 +29,7 @@ imgFilename = "data/images/test.jpg"
 
 def main():
 
-    model = YOLOv3Net(cfgfile,sizeOfModel,numberOfClass)
+    model = build(cfgfile,sizeOfModel,numberOfClass)
     model.load_weights(weightfile)
 
     class_names = load_class_names(className)

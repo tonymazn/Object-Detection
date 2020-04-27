@@ -10,42 +10,26 @@ jaskarannagi19 https://github.com/jaskarannagi19/yolov3
 import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.layers import BatchNormalization, Conv2D, Input, ZeroPadding2D, LeakyReLU, UpSampling2D
+from core.utils import config_manager
 
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
-def parse_cfg(cfgfile):
-    with open(cfgfile, 'r') as file:
-        lines = [line.rstrip('\n') for line in file if line != '\n' and line[0] != '#']
-    holder = {}
-    blocks = []
-    for line in lines:
-        if line[0] == '[':
-            line = 'type=' + line[1:-1].rstrip()
-            if len(holder) != 0:
-                blocks.append(holder)
-                holder = {}
-        key, value = line.split("=")
-        holder[key.rstrip()] = value.lstrip()
-    blocks.append(holder)
-    return blocks
 
+def build(cfgfile, model_size, num_classes):
 
-def YOLOv3Net(cfgfile, model_size, num_classes):
-
-    blocks = parse_cfg(cfgfile)
+    blocks = config_manager(cfgfile)
 
     outputs = {}
-    output_filters = []
+    outputFilters = []
     filters = []
-    out_pred = []
+    outPred = []
     scale = 0
 
     inputs = input_image = Input(shape=model_size)
     inputs = inputs / 255.0
 
     for i, block in enumerate(blocks[1:]):
-        # If it is a convolutional layer
         if (block["type"] == "convolutional"):
 
             activation = block["activation"]
@@ -72,24 +56,22 @@ def YOLOv3Net(cfgfile, model_size, num_classes):
             stride = int(block["stride"])
             inputs = UpSampling2D(stride)(inputs)
 
-        # If it is a route layer
         elif (block["type"] == "route"):
             block["layers"] = block["layers"].split(',')
             start = int(block["layers"][0])
 
             if len(block["layers"]) > 1:
                 end = int(block["layers"][1]) - i
-                filters = output_filters[i + start] + output_filters[end]  # Index negatif :end - index
+                filters = outputFilters[i + start] + outputFilters[end]  # Index negatif :end - index
                 inputs = tf.concat([outputs[i + start], outputs[i + end]], axis=-1)
             else:
-                filters = output_filters[i + start]
+                filters = outputFilters[i + start]
                 inputs = outputs[i + start]
 
         elif block["type"] == "shortcut":
             from_ = int(block["from"])
             inputs = outputs[i - 1] + outputs[i + from_]
 
-        # Yolo detection layer
         elif block["type"] == "yolo":
 
             mask = block["mask"].split(",")
@@ -135,15 +117,15 @@ def YOLOv3Net(cfgfile, model_size, num_classes):
             prediction = tf.concat([box_centers, box_shapes, confidence, classes], axis=-1)
 
             if scale:
-                out_pred = tf.concat([out_pred, prediction], axis=1)
+                outPred = tf.concat([outPred, prediction], axis=1)
             else:
-                out_pred = prediction
+                outPred = prediction
                 scale = 1
 
         outputs[i] = inputs
-        output_filters.append(filters)
+        outputFilters.append(filters)
 
-    model = Model(input_image, out_pred)
+    model = Model(input_image, outPred)
     model.summary()
     return model
 
