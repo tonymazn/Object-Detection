@@ -36,7 +36,6 @@ Install the requirements packages
 
 step 3
 [Download ObjectDection.zip file here]:
-
     https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
 
      and unzip the file and copy to the same folders.
