@@ -5,30 +5,31 @@ official yolov3 implementation  https://github.com/pjreddie/darknet
 Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
 jaskarannagi19 https://github.com/jaskarannagi19/yolov3
+RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
 """
 
 import tensorflow as tf
 import cv2
-from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, quit
 from core.yolov3 import build
+from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, quit
 
-gpu = tf.config.experimental.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(gpu[0], True)
+win_name = 'Video object detection'
+className = './data/coco.names'
+cfgfile = 'cfg/yolov3.cfg'
+weightfile = 'weights/yolov3_weights.tf'
+video_filename = "data/videoes/2019_0224_112436_312.mp4"
+output_format = "XVID"   #"mp4v"
+output_file = "result/2019_0224_112436_312_result.mp4"
+
 modelSize = (416, 416,3)
 numberOfClasses = 80
-className = './data/coco.names'
 maxOutputSize = 100
 maxOutputSizePerClass = 20
 iouThreshold = 0.5
 confidenceThreshold = 0.5
-win_name = 'Yolov3 video'
-cfgfile = 'cfg/yolov3.cfg'
-weightfile = 'weights/yolov3_weights.tf'
-video_filename = "data/videoes/2019_0224_112436_312.mp4"
-output_format = "XVID"
-#"mp4v"
-output_file = "result/2019_0224_112436_312_result.mp4"
 
+gpu = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpu[0], True)
 def main():
     model = build(cfgfile,modelSize,numberOfClasses)
     model.load_weights(weightfile)

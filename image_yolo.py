@@ -1,9 +1,13 @@
 """
-Refernece: 
+Reference: 
+
 official yolov3 implementation  https://github.com/pjreddie/darknet
 Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
+jaskarannagi19 https://github.com/jaskarannagi19/yolov3
+RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
 """
+
 
 
 import tensorflow as tf
@@ -12,11 +16,11 @@ import numpy as np
 from core.yolov3 import build
 from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage
 
-win_name = 'Image detection'
+win_name = 'Image object detection'
 className = './data/coco.names'
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
-imgFilename = "data/images/test.jpg"
+imgFilename = "data/images/demo.jpg"
 
 sizeOfModel = (416, 416,3)
 numberOfClass = 80

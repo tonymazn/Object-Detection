@@ -5,16 +5,17 @@ official yolov3 implementation  https://github.com/pjreddie/darknet
 Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
 jaskarannagi19 https://github.com/jaskarannagi19/yolov3
+RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
 """
+
 
 
 import tensorflow as tf
 import cv2
-import time
 from core.yolov3 import build
-from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, statistics, startStatistics, isExisting
+from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, quit
 
-win_name = 'Yolov3 object detection by camera'
+win_name = 'Camera object detection'
 className = './data/coco.names'
 cfgfile = 'cfg/yolov3.cfg'
 weightfile = 'weights/yolov3_weights.tf'
@@ -38,7 +39,6 @@ def main():
                   cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     try:
         while True:
-            startStatistics()
             ret, frame = cap.read()
             if not ret:
                 break
@@ -54,8 +54,7 @@ def main():
                 confidenceThreshold=confidenceThreshold)
             img = drawOutputs(frame, boxes, scores, classes, nums, class_names)
             cv2.imshow(win_name, img)
-            statistics()
-            if isExisting():
+            if quit():
                 break
     finally:
         cv2.destroyAllWindows()

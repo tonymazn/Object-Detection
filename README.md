@@ -8,4 +8,4 @@ Here's the video output example:
 https://youtu.be/7O721Zt6wE8
 
 Here's the camera output example:
-https://www.youtube.com/watch?v=KS8ZscTCw7Q&t=6s
+https://youtu.be/GHK44tlMlcA
