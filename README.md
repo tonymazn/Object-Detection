@@ -32,7 +32,7 @@ Install the requirements packages
 
 
 step 3
-[Download data and weights zip file here](https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf) and unzip copy to the same folders.
+[Download data and weights zip file here]: https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf and unzip copy to the same folders.
 
 you are ready to go!
 ```
