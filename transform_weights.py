@@ -4,8 +4,6 @@ Reference:
 official yolov3 implementation  https://github.com/pjreddie/darknet
 Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
-jaskarannagi19 https://github.com/jaskarannagi19/yolov3
-RahmadSadli  https://mc.ai/the-beginners-guide-to-implementing-yolo-v3-in-tensorflow-2-0-part-1/
 """
 
 
@@ -14,7 +12,7 @@ from core.yolov3 import build
 from core.utils import configManager
 
 
-def load_Weights(model,cfgfile,weightfile):
+def loadWeights(model,cfgfile,weightfile):
     fp = open(weightfile, "rb")
 
     np.fromfile(fp, dtype=np.int32, count=5)
@@ -69,7 +67,7 @@ def main():
     model_size = (416, 416, 3)
 
     model=build(cfgfile,model_size,num_classes)
-    load_Weights(model,cfgfile,weightfile)
+    loadWeights(model,cfgfile,weightfile)
 
     try:
         model.save_weights('weights/yolov2-voc.weights.tf')

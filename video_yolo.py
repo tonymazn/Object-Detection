@@ -12,10 +12,10 @@ from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage, 
 win_name = 'Video object detection'
 className = './data/coco.names'
 cfgfile = './cfg/yolov3.cfg'
-weightfile = 'weights/yolov3_weights.tf'
-video_filename = "data/videoes/2019_0224_112436_312.mp4"
+weightfile = './weights/yolov3_weights.tf'
+video_filename = "./data/videoes/2019_0224_112436_312.mp4"
 output_format = "XVID"   #"mp4v"
-output_file = "result/2019_0224_112436_312_result.mp4"
+output_file = "./result/2019_0224_112436_312_result.mp4"
 
 modelSize = (416, 416,3)
 numberOfClasses = 80
