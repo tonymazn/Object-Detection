@@ -1,9 +1,10 @@
 ﻿Final Project: Object Detection - VOLOv3 Tensorflow
 
-[DEMO]
+[Introduction]
 This project is a Python base tool to demonstrate Object Detecion by YOLO v3 on Windows Envirenment.
 
-Image Object Detection DEMO:  Image_detection.png)
+[DEMO]
+Image Object Detection DEMO:  Image_detection.png
 
 Video Object Detection DEMO:  https://youtu.be/7O721Zt6wE8
 
@@ -31,6 +32,22 @@ step 3
      and unzip the file and copy to the same folders.
 
 you are ready to go!
+
+
+[Usage]
+Image Object detection
+
+     python image_yolo.py
+
+
+Video Object detection
+
+     python video_yolo.py
+
+Camera Object detection
+
+     pyton camera_yolo.py
+
 
 
 [System Structure]
