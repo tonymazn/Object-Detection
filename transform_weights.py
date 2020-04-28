@@ -56,9 +56,9 @@ def main():
     #cfgfile = "cfg/yolov3.cfg"
     #num_classes = 80
 
-    weightfile = "weights/yolov2-voc.weights"
-    cfgfile = "cfg/yolov2-voc.cfg"
-    num_classes = 19
+    weightfile = "weights/yolo-voc.weights"
+    cfgfile = "cfg/yolo-voc.2.0.cfg"
+    num_classes = 20
 
     #weightfile = "weights/extraction.conv.weights"
     #cfgfile = "cfg/extraction.conv.cfg"

@@ -129,4 +129,7 @@ Reference
 *  (3) Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
 *  (4) Ayoosh Kathuria https://github.com/ayooshkathuria/YOLO_v3_tutorial_from_scratch
 *  (5) YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
-*  (6) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD
+*  (6) The PASCAL Visual Object Classes http://host.robots.ox.ac.uk/pascal/VOC/
+*  (7) COCO Common Objects Dataset http://cocodataset.org/#overview
+*  (8) zzh8829 https://github.com/zzh8829/yolov3-tf2/blob/master/docs/training_voc.md
+*  (9) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD

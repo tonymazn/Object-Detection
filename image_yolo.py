@@ -14,8 +14,8 @@ from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage
 
 win_name = 'Image object detection'
 className = './data/coco.names'
-cfgfile = './cfg/yolov3.cfg'
-weightfile = './weights/yolov3_weights.tf'
+cfgfile = './cfg/yolov2-voc.cfg'
+weightfile = './weights/yolov2-voc.weights.tf'
 imgFilename = "./data/images/demo.jpg"
 
 sizeOfModel = (416, 416,3)
