@@ -21,21 +21,33 @@ Installation
 -
 Getting the tool to work is simple, download/clone the package, unzip the package and go to the ObjectDetection-master folder and then run the following command:
 
-
 step 1
+Install nVIDIA GPU driver(you need a nVIDIA Video card)
+
+step 2
+Install CUDA and cuDNN
+
+     download CUDA v10.0 and install
+     download cuDNN v7.6.4 for CUDA 10.0
+     unzip and copy to CUDA folder
+
+step 3
 Create Virtual Environment
 
     conda create -n yolov3 python=3.7
 
     conda activate yolov3
 
-step 2
+step 4
 Install the requirements packages
 
-    (yolov3)$ pip install -r requirement.txt
+    (yolov3)$ pip install -r requirements.txt 
+    
+        or if you meet permission issue, try the following:
+    
+    (yolov3)$ pip install -r requirements.txt --user 
 
-
-step 3
+step 5
 [Download ObjectDection.zip file here]:
     https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
 
@@ -57,7 +69,7 @@ Video Object detection
 
 Camera Object detection
 
-     pyton camera_yolo.py
+     python camera_yolo.py
 
 
 System Structure
