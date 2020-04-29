@@ -14,8 +14,8 @@ from core.utils import getClassNames, getOutputBoxes, drawOutputs, resizeImage
 
 win_name = 'Image object detection'
 className = './data/coco.names'
-cfgfile = './cfg/yolov2-voc.cfg'
-weightfile = './weights/yolov2-voc.weights.tf'
+cfgfile = './cfg/yolov3.cfg'
+weightfile = './weights/yolov3_weights.tf'
 imgFilename = "./data/images/demo.jpg"
 
 sizeOfModel = (416, 416,3)
@@ -23,7 +23,7 @@ numberOfClass = 80
 maxOutputSize = 40
 maxOutputSizePerClass = 20
 iouThreshold = 0.5
-confidenceThreshold = 0.6
+confidenceThreshold = 0.4
 
 def main():
     gpu = tf.config.experimental.list_physical_devices('GPU')

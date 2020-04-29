@@ -7,7 +7,7 @@ This project is a Python base tool to demonstrate Object Detecion by YOLO v3 on 
 
 Here's the image output example:
 
-![Image Object Detection DEMO](Image_detection.png)
+![Image Object Detection DEMO](result/Image_detection.png)
 
 Here's the video output example:
 [![Video Object Detaction DEMO](videoCapture.PNG)](https://youtu.be/7O721Zt6wE8)
