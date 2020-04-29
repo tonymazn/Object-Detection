@@ -136,12 +136,13 @@ Apache License
 
 Reference
 -
-*  (1) Official YOLOv3 https://pjreddie.com/darknet/yolo/
-*  (2) official YOLOv3 github https://github.com/pjreddie/darknet
-*  (3) Ayoosh Kathuria https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
-*  (4) Ayoosh Kathuria https://github.com/ayooshkathuria/YOLO_v3_tutorial_from_scratch
-*  (5) YunYang1994  https://github.com/YunYang1994/tensorflow-yolov3
-*  (6) The PASCAL Visual Object Classes http://host.robots.ox.ac.uk/pascal/VOC/
-*  (7) COCO Common Objects Dataset http://cocodataset.org/#overview
-*  (8) zzh8829 https://github.com/zzh8829/yolov3-tf2/blob/master/docs/training_voc.md
-*  (9) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD
+*  (1) Pascal VOC Dataset  https://pjreddie.com/projects/pascal-voc-dataset-mirror/
+*  (2) COCO Dataset: http://cocodataset.org/#overview
+*  (3) AYOOSH KATHURIA, How to implement a YOLO (v3) object detector from scratch https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
+*  (4) YunYang1994 https://github.com/YunYang1994/tensorflow-yolov3
+*  (5) YOLOv3 official site: https://pjreddie.com/darknet/yolo/
+*  (6) zzh8829/yolv3-tf2,TF YOLO V3 Object Detection in TensorFlow 2.0 http://datahacker.rs/tensorflow2-0-yolov3/
+*  (7) Joseph Redmon,YOLOv3: An Incremental Improvement https://pjreddie.com/media/files/papers/YOLOv3.pdf
+*  (8) Dae-Hwan Kim,Evaluation of COCO Validation 2017 Dataset with YOLOv3 http://www.jmest.org/wp-content/uploads/JMESTN42352998.pdf
+*  (9) Honathan Hui, Real-time Object Detection with YOLO, YOLO2 and now YOLOv3, section “YOLOv3 performance”  https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088
+*  (10) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD
