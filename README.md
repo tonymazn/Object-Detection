@@ -41,7 +41,7 @@ Create Virtual Environment
 step 4
 Install the requirements packages
 
-    (yolov3)$ pip install -r requirements.txt or
+    (yolov3)$ pip install -r requirements.txt or if you meet permission issue, try the following:
     (yolov3)$ pip install -r requirements.txt --user 
 
 step 5
