@@ -61,7 +61,7 @@ Video Object detection
 
 Camera Object detection
 
-     pyton camera_yolo.py
+     python camera_yolo.py
 
 
 
