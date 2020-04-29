@@ -1,4 +1,4 @@
-﻿Final Project: Object Detection - VOLOv3 Tensorflow
+﻿Final Project: Object Detection - VOLOv3
 
 [Introduction]
 This project is a Python base tool to demonstrate Object Detecion by YOLO v3 on Windows Envirenment.
