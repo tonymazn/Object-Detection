@@ -136,4 +136,3 @@ Apache License
 *  (8) Dae-Hwan Kim,Evaluation of COCO Validation 2017 Dataset with YOLOv3 http://www.jmest.org/wp-content/uploads/JMESTN42352998.pdf
 *  (9) Honathan Hui, Real-time Object Detection with YOLO, YOLO2 and now YOLOv3, section “YOLOv3 performance”  https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088
 *  (10) Yonge Street Toronto https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.blogto.com%2Fcity%2F2019%2F10%2Fyonge-street-toronto-car-free%2F&psig=AOvVaw1pDPfTAoazYPXOL_2ix-7K&ust=1588103171806000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDtoL6viekCFQAAAAAdAAAAABAD
-
