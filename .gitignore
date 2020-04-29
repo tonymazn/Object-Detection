@@ -139,3 +139,4 @@ dmypy.json
 /result/*.mp4
 /ObjectDection.zip
 /ObjectDetection.zip
+/test
