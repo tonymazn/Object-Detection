@@ -44,7 +44,7 @@ Install the requirements packages
     (yolov3)$ pip install -r requirements.txt or
     (yolov3)$ pip install -r requirements.txt --user 
 
-step 4
+step 5
 [Download ObjectDection.zip file here]:
     https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
 
