@@ -28,6 +28,7 @@ step 2
 Install CUDA and cuDNN
 
      download CUDA v10.0 and install
+
      download cuDNN v7.6.4 for CUDA 10.0
      unzip and copy to CUDA folder
 
