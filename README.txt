@@ -22,7 +22,7 @@ Create Virtual Environment
 step 2
 Install the requirements packages
 
-    (yolov3)$ pip install -r requirement.txt
+    (yolov3)$ pip install -r requirements.txt
 
 
 step 3
