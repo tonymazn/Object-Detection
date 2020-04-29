@@ -49,7 +49,7 @@ Code + Data:  ObjectDetection.zip
 
 or
 
-Code only: ObjectDetectionWithoutData.zip
+Data only: ObjectDetectionData.zip
 
      unzip the file and copy to the same folders.
 
