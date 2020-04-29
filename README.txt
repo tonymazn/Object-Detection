@@ -42,10 +42,16 @@ Install the requirements packages
     (yolov3)$ pip install -r requirements.txt --user 
 
 step 5
-[Download ObjectDection.zip file here]:
-    https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
+[Download source here]:
+https://drive.google.com/drive/folders/100SOPwtUrVMT2vXKzS-NyQHc56Cob-cf
 
-     and unzip the file and copy to the same folders.
+Code + Data:  ObjectDetection.zip
+
+or
+
+Code only: ObjectDetectionWithoutData.zip
+
+     unzip the file and copy to the same folders.
 
 you are ready to go!
 
