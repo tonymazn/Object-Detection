@@ -108,13 +108,13 @@ Camera Object detection
     │     ├── 2019_0224_112436_312_result.mp4    
     │     └── Image_detection.png
     ├─ README.md
-	├─ camera_yolo.py                                    # Object detection by camera
-	├─ video_yolo.py                                     # Object detection by video file
-	├─ image_yolo.py                                     # Object detection by image file
-	├─ transform_weights.py                              # Transform YOLO weight file to tensorflow format
-	├─ requirements.txt                                  # Install requirement list
+    ├─ camera_yolo.py                                    # Object detection by camera
+    ├─ video_yolo.py                                     # Object detection by video file
+    ├─ image_yolo.py                                     # Object detection by image file
+    ├─ transform_weights.py                              # Transform YOLO weight file to tensorflow format
+    ├─ requirements.txt                                  # Install requirement list
     ├─ SECURITY.md                                       # github SECURITY file
-	├─ Image_detection.png                               # README image Object detection Result DEMO
+    ├─ Image_detection.png                               # README image Object detection Result DEMO
     └─ LICENSE                                           # License 
 
 
