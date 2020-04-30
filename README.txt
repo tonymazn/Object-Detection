@@ -8,7 +8,7 @@ Image Object Detection DEMO:  result/Image_detection.png
 
 Video Object Detection DEMO:  https://youtu.be/7O721Zt6wE8
 
-Camera Object Detaction DEMO: https://youtu.be/GHK44tlMlcA
+Camera Object Detection DEMO: https://youtu.be/GHK44tlMlcA
 
 
 [Installation]
@@ -82,12 +82,16 @@ Camera Object detection
     │     ├── utils.py                           # utils
     │     └── yolov3.py                          # YOLOv3 tensorflow model file
     ├── data 
-    │     ├───── images                          # imput image files
+    │     ├───── images                          # input image files
     │     │         ├── demo.jpg               
     │     │         ├── demo1.jpg              
     │     │         ├── demo2.jpg              
     │     │         └── dog.jpg 
-    │     ├── coco.names                         # YOLO3 coco dataset class file 
+    │     ├───── videoes                         # input video files
+    │     │         ├── 2019_0224_130349_315.MP4
+    │     │         ├── 2019_0224_112436_312.MP4
+    │     │         └── DashCamTest.mp4
+    │     ├── coco.names                         # YOLO3 COCO dataset class file 
     │     └── voc.names                          # YOLO3 VOC dataset class file 
     ├── weights
     │     ├── yolov2-voc.weights                 # YOLO VOC dataset pre-train weight file                       
@@ -99,17 +103,17 @@ Camera Object detection
     │     ├── yolov3_weights.tf.data-00001-of-00002
     │     ├── yolov3_weights.tf.index            # Tensorflow format YOLO COCO weight file
     │     └── note.txt                           
-    ├── result                                   # video/image object detaction result folder  
+    ├── result                                   # video/image object detection result folder  
     │     ├── 2019_0224_112436_312_result.mp4    
     │     └── Image_detection.png
     ├─ README.md
-    ├─ camera_yolo.py                            # Object Detaction by camera
-    ├─ video_yolo.py                             # Object Detaction by video file
-    ├─ image_yolo.py                             # Object Detaction by image file
+    ├─ camera_yolo.py                            # Object detection by camera
+    ├─ video_yolo.py                             # Object detection by video file
+    ├─ image_yolo.py                             # Object detection by image file
     ├─ transform_weights.py                      # Transform YOLO weight file to tensorform format
     ├─ requirements.txt                          # Install requirement list
     ├─ SECURITY.md                               # github SECURITY file
-    ├─ Image_detection.png                       # README image Object Detaction Result DEMO
+    ├─ Image_detection.png                       # README image Object Detection Result DEMO
     └─ LICENSE                                   # License 
 
 
