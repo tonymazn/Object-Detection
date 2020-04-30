@@ -85,47 +85,47 @@ System Structure
 
 
     .
-    ├─ .vs                                       # Visual Studio files
+    ├─ .vs                                                     # Visual Studio files
     ├─ cfg
-    │     ├── yolov2-voc.cfg                     # YOLO2 VOC  dataset config file
-    │     └── yolov3.cfg                         # YOLO3 COCO dataset config file
+    │     ├── yolov2-voc.cfg                                   # YOLO2 VOC  dataset config file
+    │     └── yolov3.cfg                                       # YOLO3 COCO dataset config file
     ├── core
-    │     ├── utils.py                           # utils
-    │     └── yolov3.py                          # YOLOv3 tensorflow model file
+    │     ├── utils.py                                         # utils
+    │     └── yolov3.py                                        # YOLOv3 tensorflow model file
     ├── data 
-    │     ├───── images                          # input image files
+    │     ├───── images                                        # input image files
     │     │         ├── demo.jpg               
     │     │         ├── demo1.jpg              
     │     │         ├── demo2.jpg              
     │     │         └── dog.jpg 
-    │     ├───── videoes                          # input video files
+    │     ├───── videoes                                       # input video files
     │     │         ├── 2019_0224_130349_315.MP4
     │     │         ├── 2019_0224_112436_312.MP4
     │     │         └── DashCamTest.mp4
-    │     ├── coco.names                         # YOLO3 COCO dataset class file 
-    │     └── voc.names                          # YOLO3 VOC dataset class file 
+    │     ├── coco.names                                       # YOLO3 COCO dataset class file 
+    │     └── voc.names                                        # YOLO3 VOC dataset class file 
     ├── weights
-    │     ├── yolov2-voc.weights                 # YOLO VOC dataset pre-train weight file                       
+    │     ├── yolov2-voc.weights                               # YOLO VOC dataset pre-train weight file                       
     │     ├── yolov2-voc.weights.tf.data-00000-of-00002
     │     ├── yolov2-voc.weights.tf.data-00001-of-00002
-    │     ├── yolov2-voc.weights.tf.index        # Tensorflow format YOLO VOC weight file
-    │     ├── yolov3.weights                     # YOLO COCO dataset pre-train weight file                        
+    │     ├── yolov2-voc.weights.tf.index                      # Tensorflow format YOLO VOC weight file
+    │     ├── yolov3.weights                                   # YOLO COCO dataset pre-train weight file                        
     │     ├── yolov3_weights.tf.data-00000-of-00002
     │     ├── yolov3_weights.tf.data-00001-of-00002
-    │     ├── yolov3_weights.tf.index            # Tensorflow format YOLO COCO weight file
+    │     ├── yolov3_weights.tf.index                          # Tensorflow format YOLO COCO weight file
     │     └── note.txt                           
-    ├── result                                   # video/image object detection result folder  
+    ├── result                                                 # video/image object detection result folder  
     │     ├── 2019_0224_112436_312_result.mp4    
     │     └── Image_detection.png
     ├─ README.md
-	├─ camera_yolo.py                            # Object detection by camera
-	├─ video_yolo.py                             # Object detection by video file
-	├─ image_yolo.py                             # Object detection by image file
-	├─ transform_weights.py                      # Transform YOLO weight file to tensorform format
-	├─ requirements.txt                          # Install requirement list
-    ├─ SECURITY.md                               # github SECURITY file
-	├─ Image_detection.png                       # README image Object detection Result DEMO
-    └─ LICENSE                                   # License 
+	├─ camera_yolo.py                                          # Object detection by camera
+	├─ video_yolo.py                                           # Object detection by video file
+	├─ image_yolo.py                                           # Object detection by image file
+	├─ transform_weights.py                                    # Transform YOLO weight file to tensorflow format
+	├─ requirements.txt                                        # Install requirement list
+    ├─ SECURITY.md                                             # github SECURITY file
+	├─ Image_detection.png                                     # README image Object detection Result DEMO
+    └─ LICENSE                                                 # License 
 
 Version
 -
